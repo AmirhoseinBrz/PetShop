@@ -1,0 +1,212 @@
+.header-social-media {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.header-social-media::before,
+.header-social-media::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(30px);
+  z-index: -1;
+}
+
+.header-social-media::before {
+  left: 45%;
+  top: 25%;
+  transform: translate(-45%, -25%);
+  background-color: rgba(255, 87, 34, 0.2);
+}
+
+.header-social-media::after {
+  left: 55%;
+  top: 30%;
+  transform: translate(-55%, -30%);
+  background-color: rgba(0, 173, 181, 0.2);
+}
+
+.header-social-media > a > div,
+.header-social-media div:nth-child(3) {
+  padding: 1.5px;
+  background: linear-gradient(
+    282.23deg,
+    #ff5722 1.77%,
+    #ffffff 16.7%,
+    #00adb5 31.93%
+  );
+}
+
+.header-social-media > a > div > div,
+.header-social-media div:nth-child(3) > div {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.header-social-media > a > div:nth-child(1),
+.header-social-media > a > div:nth-child(1) > div,
+.header-social-media > a > div:nth-child(2),
+.header-social-media > a > div:nth-child(2) > div {
+  border-radius: 20px 13px 20px 20px;
+}
+
+.header-social-media > div:nth-child(3),
+.header-social-media > div:nth-child(3) > div {
+  border-radius: 20px;
+}
+
+.header-social-media > div:nth-child(3) > div {
+  width: 133px;
+  height: 133px;
+  position: relative;
+}
+
+.header-social-media > div:nth-child(3) > div > img {
+  max-width: 120px;
+  max-height: 180px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-social-media > a > div:nth-child(4),
+.header-social-media > a > div:nth-child(4) > div,
+.header-social-media > a > div:nth-child(5),
+.header-social-media > a > div:nth-child(5) > div {
+  border-radius: 13px 20px 20px 20px;
+}
+
+.form-container {
+  margin: 50px 0 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutus-form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+/* .aboutus-form > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+} */
+
+.aboutus-form > div:nth-child(1) > div,
+.aboutus-form > div:not(.aboutus-form > div:nth-child(1)) {
+  padding: 1px;
+  background: linear-gradient(
+    282.23deg,
+    #ff5722 1.77%,
+    #ffffff 16.7%,
+    #00adb5 31.93%
+  );
+  border-radius: 12px;
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+.aboutus-form input,
+.aboutus-form textarea {
+  padding: 16px 14px;
+  border-radius: 12px;
+  width: 100%;
+  resize: none;
+  font-size: var(--desk-font-size);
+}
+
+.aboutus-form textarea {
+  display: block;
+}
+
+.aboutus-form input::placeholder,
+.aboutus-form textarea::placeholder {
+  color: #b5b5b5;
+}
+
+.accordion-container {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion-card-container {
+  padding: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 87, 34, 0.26) 0%,
+    rgba(255, 255, 255, 0.16) 100%
+  );
+  border-radius: 15px;
+  position: relative;
+}
+
+.accordion-card-container > div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 50%;
+  left: 0%;
+  right: 0%;
+  top: 50%;
+  background-color: transparent;
+  filter: blur(30px);
+  border-radius: 40px;
+  transition: all 0.3s;
+}
+
+.accordion-card-container:hover > div::before {
+  background-color: rgba(255, 87, 34, 0.4);
+}
+
+.accordion-card {
+  padding: 25px 30px;
+  max-width: 600px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: all 0.3s;
+  max-height: 0px;
+  cursor: pointer;
+}
+
+.accordion-card.active .accordion-content {
+  max-height: 200px;
+}
+
+.accordion-content > p {
+  margin-top: 15px;
+  font-size: 16px;
+  text-align: justify;
+  line-height: 32px;
+  color: #403f40;
+}
+
+@media (min-width: 1280px) {
+  .aboutus-form > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+  }
+}
