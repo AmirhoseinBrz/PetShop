@@ -100,8 +100,7 @@
   position: absolute;
   top: 100%;
   right: -50%;
-  /* z-index: 999; */
-
+  z-index: 999;
   max-height: 0;
   box-shadow: 2px 2px 10px rgb(34, 34, 34, 0.3);
   border-radius: 12px;
@@ -138,6 +137,12 @@
   font-size: var(--desk-font-size);
   line-height: 29px;
   text-align: justify;
+}
+
+.body-container
+  img:not(.main-hero > img, .form > img, .header-social-media img) {
+  border-radius: 15px;
+  width: 100%;
 }
 
 .main-hero {
@@ -297,8 +302,8 @@
 }
 
 .comment-card > img {
-  width: 60px;
-  height: 60px;
+  max-width: 60px;
+  max-height: 60px;
   margin-bottom: 5px;
 }
 
@@ -391,7 +396,7 @@
   background-color: none;
   filter: blur(20px);
   border-radius: 40px;
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 
 .blog-card:hover > div::before {
@@ -402,8 +407,11 @@
   background-color: #fff;
   border-radius: 40px;
   max-width: 361px;
+  min-height: 502px;
   padding: 28px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-card > div > img {
@@ -425,6 +433,7 @@
 .blog-link {
   display: flex;
   justify-content: flex-end;
+  margin-top: auto;
 }
 
 .blog-link > button {
@@ -869,8 +878,11 @@
     margin-top: 12px;
   }
 
+  .blog-card > div {
+    min-height: 424px;
+  }
+
   .blog-link {
-    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 18px;
@@ -982,6 +994,10 @@
 
   .blog-card {
     margin: auto;
+  }
+
+  .blog-card > div > p {
+    margin-bottom: 18px;
   }
 }
 
